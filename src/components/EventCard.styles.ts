@@ -1,9 +1,10 @@
+import { Colors } from "@/constants/colors";
 import { StyleSheet, Platform } from "react-native";
 
 export const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
-    backgroundColor: 'rgba(15, 23, 42, 0.7)', // dark glass
+    backgroundColor: Colors.surfaceSoft,
     padding: 10,
     borderRadius: 14,
     marginBottom: 12,
@@ -25,7 +26,7 @@ export const styles = StyleSheet.create({
     width: 85,
     height: 85,
     borderRadius: 12,
-    backgroundColor: '#1E293B',
+    backgroundColor: Colors.imagePlaceholder,
   },
 
   content: {
@@ -37,13 +38,13 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 15,
     fontWeight: '600',
-    color: '#F8FAFC',
+    color: Colors.textPrimary,
     lineHeight: 20,
   },
 
   date: {
     marginTop: 6,
     fontSize: 13,
-    color: '#94A3B8',
+    color: Colors.textTertiary,
   },
 });

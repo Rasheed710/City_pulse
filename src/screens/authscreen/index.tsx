@@ -1,3 +1,9 @@
+import FloatingLabelInput from '@/components/FloatingLabelInput';
+import { useAuth } from '@/context/AuthContext';
+import { RootStackParamList } from '@/Navigation/RootNavigator';
+import { showErrorToast } from '@/utils/toast';
+import { isValidEmail, isValidPassword } from '@/utils/validators';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useCallback, useState } from 'react';
 import {
   ActivityIndicator,
@@ -6,13 +12,7 @@ import {
   View
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import FloatingLabelInput from '../../components/FloatingLabelInput';
-import { useAuth } from '../../context/AuthContext';
-import { showErrorToast } from '../../utils/toast';
-import { isValidEmail, isValidPassword } from '../../utils/validators';
 import { styles } from './styles';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../navigation/RootNavigator';
 
 type AuthProps = NativeStackScreenProps<RootStackParamList, 'Auth'>;
 export default function AuthScreen({ navigation }:AuthProps) {

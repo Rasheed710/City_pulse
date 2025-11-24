@@ -1,9 +1,10 @@
+import { Colors } from "@/constants/colors";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: '#050509',
+    backgroundColor: Colors.backgroundAlt,
   },
   scrollContent: {
     paddingBottom: 16,
@@ -18,12 +19,12 @@ export const styles = StyleSheet.create({
     height: 230,
   },
   heroFallback: {
-    backgroundColor: '#15151f',
+    backgroundColor: Colors.heroFallback,
     alignItems: 'center',
     justifyContent: 'center',
   },
   heroFallbackText: {
-    color: '#f5f5f5',
+    color: Colors.textLight,
     fontSize: 18,
     fontWeight: '600',
   },
@@ -63,7 +64,7 @@ export const styles = StyleSheet.create({
     borderRadius: 999,
   },
   chipText: {
-    color: '#f5f5f5',
+    color: Colors.textLight,
     fontSize: 12,
     fontWeight: '500',
   },
@@ -81,7 +82,7 @@ export const styles = StyleSheet.create({
   },
   favIcon: {
     fontSize: 20,
-    color: '#ff3366',
+    color: Colors.accent,
   },
 
   titleBlock: {
@@ -89,17 +90,17 @@ export const styles = StyleSheet.create({
     paddingVertical: 14,
   },
   title: {
-    color: '#f5f5f5',
+    color: Colors.textLight,
     fontSize: 22,
     fontWeight: '700',
   },
   subtitle: {
-    color: '#c4c4cf',
+    color: Colors.textMuted,
     fontSize: 14,
     marginTop: 4,
   },
   locationText: {
-    color: '#8b8b99',
+    color: Colors.textSoft,
     fontSize: 13,
     marginTop: 2,
   },
@@ -107,20 +108,20 @@ export const styles = StyleSheet.create({
   card: {
     marginHorizontal: 16,
     marginTop: 14,
-    backgroundColor: '#11111a',
+    backgroundColor: Colors.cardBg,
     borderRadius: 16,
     padding: 14,
     borderWidth: 1,
-    borderColor: '#1e1e2b',
+    borderColor: Colors.cardBorder,
   },
   cardTitle: {
-    color: '#f5f5f5',
+    color: Colors.textLight,
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 6,
   },
   cardBody: {
-    color: '#c4c4cf',
+    color: Colors.textMuted,
     fontSize: 13,
     lineHeight: 19,
   },

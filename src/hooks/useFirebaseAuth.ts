@@ -1,4 +1,3 @@
-// src/hooks/useFirebaseAuth.ts
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { useEffect, useState } from 'react';
 

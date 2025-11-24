@@ -1,10 +1,9 @@
-// screens/BiometricLockScreen.tsx
-import React, { useEffect } from 'react';
-import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
-import { useAuth } from '../../context/AuthContext';
-import { styles } from './styles';
+import { RootStackParamList } from '@/Navigation/RootNavigator';
+import { useAuth } from '@/context/AuthContext';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../navigation/RootNavigator';
+import React, { useEffect } from 'react';
+import { ActivityIndicator, Text, View } from 'react-native';
+import { styles } from './styles';
 type BioProps = NativeStackScreenProps<RootStackParamList, 'BiometricLock'>;
 export default function BiometricLockScreen({ navigation }: BioProps) {
   const { signInWithBiometrics } = useAuth();

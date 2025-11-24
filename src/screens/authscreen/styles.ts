@@ -1,9 +1,11 @@
-import { StyleSheet } from "react-native";
+
+import { Colors } from '@/constants/colors';
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#050816',
+    backgroundColor: Colors.background,
   },
   inner: {
     flex: 1,
@@ -17,22 +19,22 @@ export const styles = StyleSheet.create({
   appTitle: {
     fontSize: 26,
     fontWeight: '700',
-    color: '#F9FAFB',
+    color: Colors.textPrimary,
     marginBottom: 6,
   },
   welcomeText: {
     fontSize: 14,
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
   },
   signinButton: {
-    backgroundColor: '#2563EB',
+    backgroundColor: Colors.primary,
     paddingVertical: 14,
     borderRadius: 999,
     alignItems: 'center',
     marginTop: 18,
   },
   signinText: {
-    color: '#F9FAFB',
+    color: Colors.textPrimary,
     fontSize: 16,
     fontWeight: '600',
   },
@@ -41,12 +43,12 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: '#4B5563',
+    borderColor: Colors.borderSubtle,
     alignItems: 'center',
-    backgroundColor: 'rgba(15,23,42,0.9)',
+    backgroundColor: Colors.surfaceMuted,
   },
   biometricText: {
-    color: '#E5E7EB',
+    color: Colors.textOnMuted,
     fontSize: 14,
     fontWeight: '500',
   },
@@ -56,10 +58,10 @@ export const styles = StyleSheet.create({
   },
   registerText: {
     fontSize: 14,
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
   },
   registerLink: {
-    color: '#38BDF8',
+    color: Colors.link,
     fontWeight: '600',
   },
 });

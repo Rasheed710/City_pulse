@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect, memo, useCallback } from "react";
+import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import {
-  View,
-  TextInput,
   Animated,
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  Modal,
   FlatList,
   KeyboardTypeOptions,
+  Modal,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
 } from "react-native";
 import { styles } from "./FloatingInput.styles";
 

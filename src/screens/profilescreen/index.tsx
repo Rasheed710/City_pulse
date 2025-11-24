@@ -1,20 +1,18 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
   Alert,
-  Platform,
-  StyleSheet,
   Switch,
   Text,
   TouchableOpacity,
   View
 } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { useAuth } from '../../context/AuthContext';
-import { getProfile } from '../../utils/storage';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../navigation/RootNavigator';
 import { styles } from './styles';
-type ProfileProps = NativeStackScreenProps<RootStackParamList, 'Profile'>;
+import { useAuth } from '@/context/AuthContext';
+import { RoottabParamList } from '@/Navigation/RootNavigator';
+import { getProfile } from '@/utils/storage';
+type ProfileProps = NativeStackScreenProps<RoottabParamList, 'Profile'>;
 export default function ProfileScreen(props:ProfileProps) {
   const {
     user,
@@ -64,7 +62,7 @@ try {
         <View style={styles.header}>
           {/* <View style={styles.avatarWrap}>
             <Image
-              source={require('../assets/placeholder.png')} // replace if needed
+              source={require('../assets/placeholder.png')}
               style={styles.avatar}
               resizeMode="cover"
             />

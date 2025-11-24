@@ -1,26 +1,21 @@
+import { useAuth } from '@/context/AuthContext';
+import { RootStackParamList } from '@/Navigation/RootNavigator';
+import { getFavourites, saveFavouritesToFirestore, toggleFavouriteLocal } from '@/utils/storage';
 import { AntDesign } from '@react-native-vector-icons/ant-design';
 import Feather from '@react-native-vector-icons/feather';
 import { useNavigation } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Alert,
   Image,
   ScrollView,
-  StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useAuth } from '../../context/AuthContext';
-import {
-  getFavourites,
-  saveFavouritesToFirestore,
-  toggleFavouriteLocal,
-} from '../../utils/storage';
 import { styles } from './styles';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../navigation/RootNavigator';
 type DetailProps = NativeStackScreenProps<RootStackParamList, 'Details'>;
 export default function EventDetailsScreen({ route }:DetailProps ) {
   const { event } = route.params;

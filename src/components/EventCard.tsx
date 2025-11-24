@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Image, Text, View } from 'react-native';
 import { styles } from './EventCard.styles';
-import { EventType } from '../types';
+import { EventType } from '@/types';
 
 interface Eventprops {
 event:EventType

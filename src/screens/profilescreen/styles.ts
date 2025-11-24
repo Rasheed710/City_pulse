@@ -1,9 +1,10 @@
+import { Colors } from "@/constants/colors";
 import { Platform, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: '#050816', 
+    backgroundColor: Colors.background,
   },
   container: {
     flex: 1,
@@ -22,7 +23,7 @@ export const styles = StyleSheet.create({
     height: 88,
     borderRadius: 22,
     overflow: 'hidden',
-    backgroundColor: '#0B1220',
+    backgroundColor: Colors.avatarBg,
     ...Platform.select({
       ios: {
         shadowColor: '#000',
@@ -47,20 +48,20 @@ export const styles = StyleSheet.create({
   },
 
   name: {
-    color: '#F8FAFC',
+    color: Colors.textPrimary,
     fontSize: 20,
     fontWeight: '700',
   },
 
   email: {
     marginTop: 6,
-    color: '#94A3B8',
+    color: Colors.textTertiary,
     fontSize: 14,
   },
 
   card: {
     marginTop: 8,
-    backgroundColor: 'rgba(15,23,42,0.7)',
+    backgroundColor: Colors.surfaceMuted,
     borderRadius: 14,
     padding: 14,
     ...Platform.select({
@@ -77,7 +78,7 @@ export const styles = StyleSheet.create({
   },
 
   sectionTitle: {
-    color: '#E6EEF8',
+    color: Colors.sectionTitle,
     fontSize: 13,
     fontWeight: '600',
     marginBottom: 10,
@@ -88,23 +89,23 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255,255,255,0.03)',
+    borderBottomColor: Colors.rowDivider,
   },
 
   rowLabel: {
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
     fontSize: 14,
   },
 
   rowValue: {
-    color: '#F8FAFC',
+    color: Colors.textPrimary,
     fontSize: 14,
     maxWidth: '60%',
     textAlign: 'right',
   },
 
   rowDescription: {
-    color: '#6B7280',
+    color: Colors.textDim,
     fontSize: 12,
     marginTop: 2,
   },
@@ -117,13 +118,13 @@ export const styles = StyleSheet.create({
   logoutBtn: {
     height: 50,
     borderRadius: 12,
-    backgroundColor: '#EF4444',
+    backgroundColor: Colors.danger,
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   logoutText: {
-    color: '#FFF',
+    color: Colors.textPrimary,
     fontSize: 16,
     fontWeight: '700',
   },

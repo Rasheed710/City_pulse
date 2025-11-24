@@ -1,27 +1,27 @@
+import FloatingLabelInput from '@/components/FloatingLabelInput';
+import { useAuth } from '@/context/AuthContext';
+import { RootStackParamList } from '@/Navigation/RootNavigator';
+import { isValidEmail, isValidName, isValidPassword } from '@/utils/validators';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
-  StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import { styles } from './styles';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import FloatingLabelInput from '../../components/FloatingLabelInput';
-import { useAuth } from '../../context/AuthContext';
-import { RootStackParamList } from '../../navigation/RootNavigator';
-import { isValidName, isValidEmail, isValidPassword } from '../../utils/validators';
+
 type SignupProps = NativeStackScreenProps<RootStackParamList, 'Signup'>;
 export default function SignupScreen({ navigation }: SignupProps) {
   const { signUp } = useAuth();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  // const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
   const [errors, setErrors] = useState({

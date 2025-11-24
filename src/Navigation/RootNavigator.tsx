@@ -3,13 +3,14 @@ import Feather from '@react-native-vector-icons/feather';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import BiometricLockScreen from '../screens/biometriclockscreen';
-import EventDetailsScreen from '../screens/eventdetailsscreen';
-import HomeScreen from '../screens/homescreen';
-import ProfileScreen from '../screens/profilescreen';
-import AuthScreen from '../screens/authscreen';
-import SignupScreen from '../screens/signupscreen';
+import { Colors } from '@/constants/colors';
+import { useAuth } from '@/context/AuthContext';
+import BiometricLockScreen from '@/screens/biometriclockscreen';
+import EventDetailsScreen from '@/screens/eventdetailsscreen';
+import HomeScreen from '@/screens/homescreen';
+import ProfileScreen from '@/screens/profilescreen';
+import SignupScreen from '@/screens/signupscreen';
+import AuthScreen from '@/screens/authscreen';
 
 export type RootStackParamList = {
   Auth: undefined;
@@ -20,8 +21,13 @@ export type RootStackParamList = {
   BiometricLock:undefined
 };
 
+export type RoottabParamList = {
+  Home: undefined;
+  Profile: undefined;
+};
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<RoottabParamList>();
 const AUTH_KEY = 'citypulse:auth_local';
 const BIOMETRIC_FLAG = 'citypulse:biometric_enabled';
 
@@ -48,8 +54,8 @@ function Tabnavigator() {
         },
 
       
-        tabBarActiveTintColor: "#38BDF8", 
-        tabBarInactiveTintColor: "#94A3B8",   
+       tabBarActiveTintColor: Colors.link,
+        tabBarInactiveTintColor: Colors.textTertiary, 
 
         tabBarStyle: {
           backgroundColor: "rgba(15,23,42,0.9)",  

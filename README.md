@@ -97,12 +97,148 @@ To learn more about React Native, take a look at the following resources:
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
 
 ## Features
-- Search events via Ticketmaster Discovery API (keyword + city)
-- Event details with map preview (react-native-maps)
-- Mark favourites locally and optionally sync to Firebase Firestore
-- Authentication: Email/Password with Firebase. Local AsyncStorage fallback if Firebase not configured
-- Biometric sign-in opt-in (react-native-biometrics)
-- Language toggle (English / Arabic) via i18next (RTL requires native reload)
-- Clean modular code and hooks
+
+- 🔍 Search events by keyword and city
+- 📍 View event details with map preview
+- ⭐ Mark favourite events (synced to Firebase)
+- 🌐 English/Arabic language support with RTL
+- 🔐 Firebase Authentication
+- 👆 Biometric login support
+- 📱 Modern, dark-themed UI
+
+## Prerequisites
+
+- Node.js >= 20
+- React Native CLI
+- iOS: Xcode 14+, CocoaPods
+- Android: Android Studio, JDK 17+
+- Firebase project configured
+
+## Setup Instructions
+
+### 1. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+````
+
+### 2. iOS Setup
+
+```bash
+cd ios
+bundle install
+bundle exec pod install
+cd ..
+```
+
+### 3. Android Setup
+
+Ensure Android SDK and build tools are installed.
+
+### 4. Firebase Configuration
+
+1. Create a Firebase project at https://console.firebase.google.com
+2. Add iOS app: Download `GoogleService-Info.plist` → Place in `ios/CityPulse/`
+3. Add Android app: Download `google-services.json` → Place in `android/app/`
+4. Enable Authentication (Email/Password)
+5. Enable Firestore Database
+
+### 5. API Keys Configuration
+
+#### Ticketmaster API Key
+
+- Get free API key from: https://developer.ticketmaster.com/
+- Update `src/config.ts`:
+  ```typescript
+  export const TICKETMASTER_API_KEY = 'YOUR_KEY_HERE';
+  ```
+
+#### Google Maps API Key (for map preview)
+
+- Get API key from: https://console.cloud.google.com/
+- Enable Maps SDK for iOS and Android
+- **iOS:** Add to `ios/CityPulse/Info.plist`:
+  ```xml
+  <key>GMSApiKey</key>
+  <string>YOUR_GOOGLE_MAPS_API_KEY</string>
+  ```
+- **Android:** Add to `android/app/src/main/AndroidManifest.xml`:
+  ```xml
+  <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR_GOOGLE_MAPS_API_KEY"/>
+  ```
+
+### 6. Run the Application
+
+```bash
+# Start Metro bundler
+npm start
+
+# iOS
+npm run ios
+
+# Android
+npm run android
+```
+
+## Assumptions Made
+
+1. **API Keys:** Ticketmaster API key is provided in config. In production, use environment variables.
+2. **Firebase:** Assumes Firebase project is already configured with Auth and Firestore enabled.
+3. **RTL Support:** Arabic RTL layout requires app restart (native limitation). This is acceptable for the assessment.
+4. **Biometric Support:** Assumes device has biometric capabilities (Face ID/Touch ID/Fingerprint).
+5. **Network:** Assumes stable internet connection for API calls and Firebase sync.
+6. **Mock Data:** Authentication uses Firebase (not mock data) as per bonus requirements.
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── context/         # React Context providers (Auth, Language)
+├── hooks/           # Custom React hooks (useEvents, useFirebaseAuth)
+├── Navigation/      # Navigation configuration
+├── screens/         # Screen components
+├── types/           # TypeScript type definitions
+└── utils/           # Utility functions (storage, validators, toast)
+```
+
+## Key Technologies
+
+- React Native 0.81.4
+- TypeScript
+- React Navigation 7
+- Firebase (Auth, Firestore)
+- i18next (Internationalization)
+- react-native-maps
+- AsyncStorage
+- react-native-keychain
+
+## Bonus Features Implemented
+
+Firebase Authentication & Firestore  
+Biometric Login  
+RTL Support for Arabic
+
+## Troubleshooting
+
+### iOS Build Issues
+
+- Run `cd ios && pod install && cd ..`
+- Clean build folder in Xcode: Product → Clean Build Folder
+
+### Android Build Issues
+
+- Run `cd android && ./gradlew clean && cd ..`
+- Ensure `google-services.json` is in correct location
+
+### Firebase Not Working
+
+- Verify `GoogleService-Info.plist` (iOS) and `google-services.json` (Android) are present
+- Check Firebase project settings match bundle IDs
 
 ---

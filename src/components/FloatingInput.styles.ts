@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/colors";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -5,18 +6,18 @@ export const styles = StyleSheet.create({
     height: 50,
     fontSize: 16,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: Colors.borderLight,
     borderRadius: 12,
     paddingHorizontal: 16,
-    backgroundColor: "#fafafa",
+    backgroundColor: Colors.inputBackgroundLight,
   },
   textInput: {
     fontSize: 16,
-    color: "#000",
+    color: Colors.textDark,
     flex: 1,
   },
-    errorText: {
-    color: "red",
+  errorText: {
+    color: Colors.danger,
     fontSize: 12,
     marginTop: 4,
     marginLeft: 4,
@@ -25,15 +26,15 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
     borderRightWidth: 1,
-    borderColor: "#ddd",
+    borderColor: Colors.borderLight,
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.4)",
+    backgroundColor: Colors.backdrop,
     justifyContent: "flex-end",
   },
   modalContent: {
-    backgroundColor: "#fff",
+    backgroundColor: Colors.surfaceLight,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     maxHeight: "50%",
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
   modalItem: {
     paddingVertical: 12,
     borderBottomWidth: 0.5,
-    borderColor: "#ddd",
+    borderColor: Colors.borderLight,
   },
   modalItemText: {
     fontSize: 16,

@@ -6,8 +6,8 @@ import RNBootSplash from 'react-native-bootsplash';
 import { AuthProvider } from './src/context/AuthContext';
 import { LanguageProvider } from './src/context/LanguageContext';
 import i18n from './src/i18n';
-import RootNavigator from './src/navigation/RootNavigator';
 import Toast from 'react-native-toast-message';
+import RootNavigator from './src/Navigation/RootNavigator';
 
 LogBox.ignoreAllLogs(true);
 

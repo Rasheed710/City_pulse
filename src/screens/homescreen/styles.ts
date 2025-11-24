@@ -1,9 +1,10 @@
+import { Colors } from "@/constants/colors";
 import { Platform, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#050816',
+    backgroundColor: Colors.background,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
@@ -17,29 +18,29 @@ export const styles = StyleSheet.create({
   appName: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#F9FAFB',
+    color: Colors.textPrimary,
   },
   subtitle: {
     marginTop: 4,
     fontSize: 13,
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
   },
   langToggle: {
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: '#4B5563',
-    backgroundColor: 'rgba(15,23,42,0.9)',
+    borderColor: Colors.borderSubtle,
+    backgroundColor: Colors.surfaceMuted,
   },
   langToggleText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#E5E7EB',
+    color: Colors.textOnMuted,
     letterSpacing: 0.5,
   },
   searchCard: {
-    backgroundColor: '#0F172A',
+    backgroundColor: Colors.surface,
     borderRadius: 16,
     padding: 14,
     marginBottom: 12,
@@ -58,11 +59,11 @@ export const styles = StyleSheet.create({
   searchTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#F9FAFB',
+    color: Colors.textPrimary,
   },
   searchHint: {
     fontSize: 12,
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
     marginTop: 4,
     marginBottom: 12,
   },
@@ -75,18 +76,18 @@ export const styles = StyleSheet.create({
   },
   inputLabel: {
     fontSize: 12,
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
     marginBottom: 4,
   },
   input: {
     height: 42,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#1F2937',
+    borderColor: Colors.border,
     paddingHorizontal: 10,
     fontSize: 14,
-    color: '#F9FAFB',
-    backgroundColor: '#020617',
+    color: Colors.textPrimary,
+    backgroundColor: Colors.inputBackground,
   },
   actionsRow: {
     flexDirection: 'row',
@@ -98,12 +99,12 @@ export const styles = StyleSheet.create({
     borderRadius: 999,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#2563EB',
+    backgroundColor: Colors.primary,
   },
   primaryButtonText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#F9FAFB',
+    color: Colors.textPrimary,
   },
   secondaryButton: {
     marginLeft: 10,
@@ -112,21 +113,21 @@ export const styles = StyleSheet.create({
     borderRadius: 999,
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: '#4B5563',
+    borderColor: Colors.borderSubtle,
     borderWidth: 1,
-    backgroundColor: 'rgba(15,23,42,0.9)',
+    backgroundColor: Colors.surfaceMuted,
   },
   secondaryButtonText: {
     fontSize: 13,
     fontWeight: '500',
-    color: '#E5E7EB',
+    color: Colors.textOnMuted,
   },
   listContainer: {
     flex: 1,
     marginTop: 4,
   },
   listContent: {
-    paddingBottom: 12
+    paddingBottom: 12,
   },
   loadingContainer: {
     flex: 1,
@@ -136,12 +137,13 @@ export const styles = StyleSheet.create({
   loadingText: {
     marginTop: 8,
     fontSize: 13,
-    color: '#9CA3AF',
+    color: Colors.textSecondary,
   },
   emptyText: {
     marginTop: 40,
     textAlign: 'center',
     fontSize: 14,
-    color: '#6B7280',
+    color: Colors.textDim,
   },
 });
+

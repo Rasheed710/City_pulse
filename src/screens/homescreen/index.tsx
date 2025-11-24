@@ -11,17 +11,17 @@ import {
   View
 } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import EventCard from '../../components/EventCard';
-import { useAuth } from '../../context/AuthContext';
-import { useLanguage } from '../../context/LanguageContext';
-import { useEvents } from '../../hooks/useEvents';
-import { RootStackParamList } from '../../navigation/RootNavigator';
-import { EventType } from '../../types';
-import { getFavourites, getFavouritesFromFirestore } from '../../utils/storage';
 import { styles } from './styles';
+import EventCard from '@/components/EventCard';
+import { useAuth } from '@/context/AuthContext';
+import { useLanguage } from '@/context/LanguageContext';
+import { useEvents } from '@/hooks/useEvents';
+import { RoottabParamList } from '@/Navigation/RootNavigator';
+import { EventType } from '@/types';
+import { getFavourites, getFavouritesFromFirestore } from '@/utils/storage';
 
-type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
-export default function HomeScreen({ navigation }:HomeProps) {
+type HomeProps = NativeStackScreenProps<RoottabParamList, 'Home'>;
+function HomeScreen({ navigation }:HomeProps) {
   const { t, i18n } = useTranslation();
   const { toggleLanguage } = useLanguage();
   const { search, events, loading } = useEvents();
@@ -160,7 +160,7 @@ export default function HomeScreen({ navigation }:HomeProps) {
     windowSize={10}
     initialNumToRender={10}
     getItemLayout={(data, index) => ({
-      length: 105, // card height + margin
+      length: 105,
       offset: 105 * index,
       index,
     })}
@@ -171,6 +171,6 @@ export default function HomeScreen({ navigation }:HomeProps) {
     </SafeAreaProvider>
   );
 }
-
+export default HomeScreen;
 
 
